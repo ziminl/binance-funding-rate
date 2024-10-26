@@ -23,7 +23,7 @@ def get_funding_fee_history(symbol, limit=10):
         df['fundingTime'] = pd.to_datetime(df['fundingTime'], unit='ms')
         return df
     
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException as e: #requests.exceptions.RequestException
         print(f"Error fetching funding fee history: {e}")
         return None
 
